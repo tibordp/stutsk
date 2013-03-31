@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 BuiltinFunctionsMap BuiltIns::populateFunctions() {
 	BuiltinFunctionsMap funcMap;
 	// Standard I/0
-	funcMap["commandline"] = &BuiltIns::_f_commandline;
+	//funcMap["commandline"] = &BuiltIns::_f_commandline;
 	funcMap["print"] = &BuiltIns::_f_print;
 	funcMap["error"] = &BuiltIns::_f_error;
 	funcMap["readline"] = &BuiltIns::_f_readline;
@@ -30,42 +30,42 @@ BuiltinFunctionsMap BuiltIns::populateFunctions() {
 	funcMap["eof"] = &BuiltIns::_f_eof;
 
 	// File I/o
-	funcMap["readfile"] = &BuiltIns::_f_readfile;
-	funcMap["writefile"] = &BuiltIns::_f_writefile;
-	funcMap["appendfile"] = &BuiltIns::_f_appendfile;
-	funcMap["file_array"] = &BuiltIns::_f_file_array;
-	funcMap["fopen"] = &BuiltIns::_f_fopen;
-	funcMap["fread"] = &BuiltIns::_f_fread;
-	funcMap["fwrite"] = &BuiltIns::_f_fwrite;
-	funcMap["fseek"] = &BuiltIns::_f_fseek;
-	funcMap["feof"] = &BuiltIns::_f_feof;
-	funcMap["fclose"] = &BuiltIns::_f_fclose;
+	//funcMap["readfile"] = &BuiltIns::_f_readfile;
+	//funcMap["writefile"] = &BuiltIns::_f_writefile;
+	//funcMap["appendfile"] = &BuiltIns::_f_appendfile;
+	//funcMap["file_array"] = &BuiltIns::_f_file_array;
+	//funcMap["fopen"] = &BuiltIns::_f_fopen;
+	//funcMap["fread"] = &BuiltIns::_f_fread;
+	//funcMap["fwrite"] = &BuiltIns::_f_fwrite;
+	//funcMap["fseek"] = &BuiltIns::_f_fseek;
+	//funcMap["feof"] = &BuiltIns::_f_feof;
+	//funcMap["fclose"] = &BuiltIns::_f_fclose;
 
 	// Filesystem utilities
-	funcMap["file_exists"] = &BuiltIns::_f_file_exists;
-	funcMap["file_size"] = &BuiltIns::_f_file_size;
-	funcMap["file_delete"] = &BuiltIns::_f_file_delete;
-	funcMap["file_copy"] = &BuiltIns::_f_file_copy;
-	funcMap["file_move"] = &BuiltIns::_f_file_move;
-	funcMap["mkdir"] = &BuiltIns::_f_mkdir;
-	funcMap["rmdir"] = &BuiltIns::_f_rmdir;
-	funcMap["pwd"] = &BuiltIns::_f_pwd;
-	funcMap["cwd"] = &BuiltIns::_f_cwd;
-	funcMap["is_directory"] = &BuiltIns::_f_is_directory;
-	funcMap["readdir"] = &BuiltIns::_f_readdir;
+	//funcMap["file_exists"] = &BuiltIns::_f_file_exists;
+	//funcMap["file_size"] = &BuiltIns::_f_file_size;
+	//funcMap["file_delete"] = &BuiltIns::_f_file_delete;
+	//funcMap["file_copy"] = &BuiltIns::_f_file_copy;
+	//funcMap["file_move"] = &BuiltIns::_f_file_move;
+	//funcMap["mkdir"] = &BuiltIns::_f_mkdir;
+	//funcMap["rmdir"] = &BuiltIns::_f_rmdir;
+	//funcMap["pwd"] = &BuiltIns::_f_pwd;
+	//funcMap["cwd"] = &BuiltIns::_f_cwd;
+	//funcMap["is_directory"] = &BuiltIns::_f_is_directory;
+	//funcMap["readdir"] = &BuiltIns::_f_readdir;
 
 	// Socket I/o
 	funcMap["socket_open"] = &BuiltIns::_f_socket_open;
-	funcMap["socket_listen"] = &BuiltIns::_f_socket_listen;
-	funcMap["socket_accept"] = &BuiltIns::_f_socket_accept;
+	//funcMap["socket_listen"] = &BuiltIns::_f_socket_listen;
+	//funcMap["socket_accept"] = &BuiltIns::_f_socket_accept;
 	funcMap["socket_read"] = &BuiltIns::_f_socket_read;
 	funcMap["socket_readline"] = &BuiltIns::_f_socket_readline;
 	funcMap["socket_write"] = &BuiltIns::_f_socket_write;
 	funcMap["socket_eof"] = &BuiltIns::_f_socket_eof;
 	funcMap["socket_close"] = &BuiltIns::_f_socket_close;
 	funcMap["socket_open"] = &BuiltIns::_f_socket_open;
-	funcMap["socket_listen"] = &BuiltIns::_f_socket_listen;
-	funcMap["socket_accept"] = &BuiltIns::_f_socket_accept;
+	//funcMap["socket_listen"] = &BuiltIns::_f_socket_listen;
+	//funcMap["socket_accept"] = &BuiltIns::_f_socket_accept;
 	funcMap["socket_read"] = &BuiltIns::_f_socket_read;
 	funcMap["socket_readline"] = &BuiltIns::_f_socket_readline;
 	funcMap["socket_write"] = &BuiltIns::_f_socket_write;
@@ -93,7 +93,7 @@ BuiltinFunctionsMap BuiltIns::populateFunctions() {
 	funcMap["regex_match_all"] = &BuiltIns::_f_regex_match_all;
 
 	// MySQL
-	funcMap["mysql_test"] = &BuiltIns::_f_mysql_test;
+	//funcMap["mysql_test"] = &BuiltIns::_f_mysql_test;
 
 	// Crypto
 	funcMap["crc32"] = &BuiltIns::_f_crc32;
@@ -148,20 +148,20 @@ BuiltinFunctionsMap BuiltIns::populateFunctions() {
 	funcMap["include"] = &BuiltIns::_f_include;
 	funcMap["eval"] = &BuiltIns::_f_eval;
 	funcMap["uneval"] = &BuiltIns::_f_uneval;	
-	funcMap["fork"] = &BuiltIns::_f_fork;
+	//funcMap["fork"] = &BuiltIns::_f_fork;
 	funcMap["sleep"] = &BuiltIns::_f_sleep;
-	funcMap["system"] = &BuiltIns::_f_system;
-	funcMap["exec"] = &BuiltIns::_f_exec;
-	funcMap["exec_readline"] = &BuiltIns::_f_exec_readline;
-	funcMap["exec_read"] = &BuiltIns::_f_exec_read;
-	funcMap["exec_print"] = &BuiltIns::_f_exec_print;
-	funcMap["exec_readchar"] = &BuiltIns::_f_exec_readchar;
-	funcMap["exec_eof"] = &BuiltIns::_f_exec_eof;
+	//funcMap["system"] = &BuiltIns::_f_system;
+	//funcMap["exec"] = &BuiltIns::_f_exec;
+	//funcMap["exec_readline"] = &BuiltIns::_f_exec_readline;
+	//funcMap["exec_read"] = &BuiltIns::_f_exec_read;
+	//funcMap["exec_print"] = &BuiltIns::_f_exec_print;
+	//funcMap["exec_readchar"] = &BuiltIns::_f_exec_readchar;
+	//funcMap["exec_eof"] = &BuiltIns::_f_exec_eof;
 	funcMap["is_def"] = &BuiltIns::_f_is_def;
 	funcMap["definition"] = &BuiltIns::_f_definition;
 	funcMap["time"] = &BuiltIns::_f_time;
-	funcMap["env_list"] = &BuiltIns::_f_env_list;
-	funcMap["env_get"] = &BuiltIns::_f_env_get;
+	//funcMap["env_list"] = &BuiltIns::_f_env_list;
+	//funcMap["env_get"] = &BuiltIns::_f_env_get;
 
 	// Date/Time
 	funcMap["now"] = &BuiltIns::_f_now;
@@ -194,7 +194,7 @@ BuiltinFunctionsMap BuiltIns::populateFunctions() {
 	funcMap["__dumpglobalvariables"] = &BuiltIns::_f___dumpglobalvariables;
 	funcMap["__dumpvariables"] = &BuiltIns::_f___dumpvariables;
 	funcMap["__dumpstack"] = &BuiltIns::_f___dumpstack;
-	funcMap["__debug"] = &BuiltIns::_f___debug;
+	//funcMap["__debug"] = &BuiltIns::_f___debug;
 	funcMap["__type"] = &BuiltIns::_f___type;	
 
 	// Mathematic functions
