@@ -12,7 +12,7 @@ libs/libexecstream/exec-stream.o:
 	g++ -c libs/libexecstream/exec-stream.cpp -o $@
 
 obj:
-	mkdir obj
+	mkdir -p obj
 
 obj/%.o: src/%.cpp obj
 	g++ ${CC_FLAGS} -c -o $@ $<
