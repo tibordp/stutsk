@@ -11,10 +11,14 @@ stutsk: $(OBJ_FILES)
 libs/libexecstream/exec-stream.o:
 	g++ -c libs/libexecstream/exec-stream.cpp -o $@
 
-obj/%.o: src/%.cpp
+obj:
+	mkdir obj
+
+obj/%.o: src/%.cpp obj
 	g++ ${CC_FLAGS} -c -o $@ $<
 
 clean:
 	rm -f stutsk
 	rm -f ./obj/*
 
+.PHONY: clean obj
