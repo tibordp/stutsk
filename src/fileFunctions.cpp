@@ -384,7 +384,7 @@ void BuiltIns::_f_pwd(Context* context)
 	   description: Returns the path of the working directory.
 	   notes: 
 	*/
-	boost::filesystem3::path path = boost::filesystem::current_path();
+	boost::filesystem::path path = boost::filesystem::current_path();
 	*pushString() = path.string();
 }
 
