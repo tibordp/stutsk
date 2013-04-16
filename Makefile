@@ -1,24 +1,31 @@
-CPP_FILES := $(wildcard src/*.cpp)
-LIBRARY_DEPS := libs/libexecstream/exec-stream.o
-OBJ_FILES := $(addprefix obj/,$(notdir $(CPP_FILES:.cpp=.o))) $(LIBRARY_DEPS)
-LD_FLAGS := -static -lboost_filesystem -lboost_program_options -lboost_chrono \
-	-lboost_regex -lboost_thread -lboost_system -lcryptopp -lrt -lpthread
-CC_FLAGS := -DFORK_CAPABLE -DBOOST_CPP0X_PROBLEM -O3 -std=c++0x -I include/ -I libs/libexecstream/
+#
+# Makefile for stutsk
+#
 
-stutsk: $(OBJ_FILES)
-	g++ $(OBJ_FILES) ${LD_FLAGS} -o stutsk
+LIB_SRCS = libs/libexecstream/exec-stream.cpp
+LIB_OBJS = $(LIB_SRCS:.cpp=.o)
 
-libs/libexecstream/exec-stream.o:
-	g++ -c libs/libexecstream/exec-stream.cpp -o $@
+SRCS = $(wildcard src/*.cpp)
+OBJS = $(SRCS:.cpp=.o)
 
-obj:
-	mkdir -p obj
+CC = g++
 
-obj/%.o: src/%.cpp obj
-	g++ ${CC_FLAGS} -c -o $@ $<
+CXXFLAGS = -DFORK_CAPABLE -DBOOST_CPP0X_PROBLEM -O2 -std=c++0x -I include/ -I libs/libexecstream/
+LDFLAGS  = -lcryptopp -lrt -lpthread
+LDFLAGS += -lboost_regex -lboost_thread -lboost_program_options
+LDFLAGS += -lboost_filesystem -lboost_chrono -lboost_system
+
+all: libs stutsk
+
+libs: $(LIB_OBJS)
+
+stutsk: $(OBJS)
+	$(CC) $(OBJS) $(LIB_OBJS) $(LDFLAGS) -o stutsk
+
+.cpp.o:
+	$(CC) $(CXXFLAGS) -c -o $@ $<
 
 clean:
-	rm -f stutsk
-	rm -f ./obj/*
+	rm -f $(LIB_OBJS) $(OBJS) stutsk
 
-.PHONY: clean obj
+.PHONY: all libs clean
