@@ -54,7 +54,7 @@ Recursive factorial:
       $n 1 == { 1 } { $n $n 1 - recurse * } ifelse      
     } "factorial" function
     
-    5 factorial # Prints 120
+    5 factorial print # Prints 120
     
 Calculate 100 digits of Pi (deliberatly obfuscated):
     
