@@ -1,6 +1,10 @@
 Stutsk is a general-purpose concatenative programming language. It is similar to FORTH and Postscript
 in syntax, similar to Lisp in philosophy and similar to PHP in lexicon and semantics.
 
+Try out [the sandbox][sandbox]!
+
+  [sandbox]: http://persephone.ojdip.net/stutsk/
+
 Author: Tibor Djurica Potpara <tibor.djurica@ojdip.net>
 
 Prerequisites:
