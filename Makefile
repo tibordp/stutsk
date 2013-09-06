@@ -20,7 +20,7 @@ all: libs stutsk
 libs: $(LIB_OBJS)
 
 stutsk: $(OBJS)
-	$(CC) $(OBJS) $(LIB_OBJS) $(LDFLAGS) -o stutsk
+	$(CC) $(OBJS) $(LIB_OBJS) $(LDFLAGS) -o stutsk-safe
 
 .cpp.o:
 	$(CC) $(CXXFLAGS) -c -o $@ $<
