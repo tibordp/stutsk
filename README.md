@@ -3,7 +3,7 @@ in syntax, similar to Lisp in philosophy and similar to PHP in lexicon and seman
 
 Try out [the sandbox][sandbox]!
 
-  [sandbox]: http://persephone.ojdip.net/stutsk/
+  [sandbox]: http://www.ojdip.net/stutsk-online/
 
 Author: Tibor Djurica Potpara <tibor.djurica@ojdip.net>
 
